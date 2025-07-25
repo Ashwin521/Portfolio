@@ -28,6 +28,8 @@ const ContactForm = () => {
       );
 
       toast.success("Message sent successfully!");
+      console.log("message sent");
+
       reset();
     } catch (error) {
       toast.error("Failed to send message. Please try again later.");

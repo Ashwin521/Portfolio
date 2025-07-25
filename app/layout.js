@@ -1,8 +1,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "../src/components/Navbar";
-import Footer from "../src/components/Footer"
-import ScrollToTopBottom  from "../src/components/ScrollToTopBottom"
+import Footer from "../src/components/Footer";
+import ScrollToTopBottom from "../src/components/ScrollToTopBottom";
+import { Toaster } from "react-hot-toast"; // ✅ Import the Toaster
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -25,9 +27,10 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
+        <Toaster position="top-center" reverseOrder={false} />{" "}
         {children}
-        <ScrollToTopBottom/>
-        <Footer/>
+        <ScrollToTopBottom />
+        <Footer />
       </body>
     </html>
   );
