@@ -20,9 +20,10 @@ const ContactForm = () => {
         {
           from_name: data.name,
           to_name: "Ashwin Giri",
-          to_email: "your@email.com", // 🔁 REPLACE with your actual email address
+          to_email: "ashwingiri521@email.com", // ✅ this is your email, not user's
           message: data.message,
           date: new Date().toLocaleString(),
+          from_email: data.email || "Not provided", // ✅ Add this line
         },
         "E1f-Sj1bK188XZ3Vq"
       );
